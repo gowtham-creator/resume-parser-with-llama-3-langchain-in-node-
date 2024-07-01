@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATS Proof of Concept</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ATS Proof of Concept</h1>
+
+    <!-- Job Posting Form -->
+    <div class="form-section">
+      <h2>Post a Job</h2>
+      <form id="jobPostForm">
+        <textarea id="jobDescription" placeholder="Enter job description" required></textarea>
+        <br />
+        <button type="submit">Post Job</button>
+      </form>
+      <p id="jobPostResult"></p>
+    </div>
+    <!-- Resume Upload via URL Form -->
+<div class="form-section">
+  <h2>Upload Resume via URL</h2>
+  <form id="resumeUrlForm">
+    <input type="text" id="resumeUrl" placeholder="Enter URL to resume PDF" required />
+    <br /><br />
+    <button type="submit">Upload Resume</button>
+  </form>
+  <p id="resumeUrlUploadResult"></p>
+</div>
+
+
+    <!-- Resume Upload Form -->
+    <div class="form-section">
+      <h2>Upload a Resume</h2>
+      <form id="resumeUploadForm" enctype="multipart/form-data">
+        <input type="file" id="resumeFile" required />
+        <br />
+        <button type="submit">Upload Resume</button>
+      </form>
+      <p id="resumeUploadResult"></p>
+    </div>
+
+    <!-- Candidate Recommendations -->
+    <div class="form-section">
+      <h2>Recommended Candidates for a Job</h2>
+      <form id="candidateRecommendationsForm">
+        <input type="number" id="jobId" placeholder="Enter job ID" required />
+        <button type="submit">Get Candidates</button>
+      </form>
+      <ul id="candidateList"></ul>
+    </div>
+
+    <!-- Job Recommendations -->
+    <div class="form-section">
+      <h2>Recommended Jobs for a Candidate</h2>
+      <form id="jobRecommendationsForm">
+        <input type="number" id="candidateId" placeholder="Enter candidate ID" required />
+        <button type="submit">Get Jobs</button>
+      </form>
+      <ul id="jobList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
